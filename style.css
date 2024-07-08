@@ -35,6 +35,14 @@ body {
     justify-items: center;
     place-items: center;
 }
+h1 {
+    font-size: 28px;
+    font-weight: bolder;
+}
+h4 {
+    font-size: 18px;
+    font-weight: bold;
+}
 .root {
     height: 650px;
     width: 600px;
@@ -70,8 +78,12 @@ body {
     height: 35px;
     width: 360px;
     font-size: 14px;
+    border-radius: 5px;
     outline: none;
     border: none;
+    background: transparent;
+    box-shadow: 0px 0px 2px gray;
+    color: rgba(231, 231, 231, 0.806);
     padding: 0 5px;
 }
 .btn-add {
@@ -80,6 +92,8 @@ body {
     color: white;
     background: rgba(23, 227, 108, 0.792);
     font-size: 16px;
+    border-radius: 5px;
+
     outline: none;
     cursor: pointer;
     border: none;
@@ -129,6 +143,7 @@ body {
     align-items: center;
     box-shadow: 0px 0px 2px rgb(126, 126, 126);
     flex-shrink: 0;
+    border-radius: 5px;
 }
 .task-div {
     height: 30px;
@@ -156,6 +171,8 @@ body {
 .clear-btn {
     height: 40px;
     width: 200px;
+    border-radius: 5px;
+
     color: white;
     background: rgba(23, 227, 108, 0.792);
     font-size: 16px;

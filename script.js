@@ -24,6 +24,7 @@ let tasks = JSON.parse(localStorage.getItem("tasks")) ?? [];
 
 function renderTasks() {
     result.innerHTML = "";
+    tasks.sort((a, b) => a.done - b.done);
     tasks.forEach((element, i) => {
         const resultContainer = document.createElement("div");
         const taskDiv = document.createElement("div");
@@ -59,13 +60,21 @@ function renderTasks() {
 
 renderTasks();
 
-btn.addEventListener("click", function () {
+function addTask() {
     const task = inputBox.value;
     if (!task) return;
     tasks.push({ task: task, done: false });
     localStorage.setItem("tasks", JSON.stringify(tasks));
     inputBox.value = "";
     renderTasks();
+}
+
+btn.addEventListener("click", addTask);
+
+document.addEventListener("keydown", function (e) {
+    if (e.key === "Enter") {
+        addTask();
+    }
 });
 
 clearBtn.addEventListener("click", function () {
